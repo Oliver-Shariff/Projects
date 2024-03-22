@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Webpage</title>
+<style>
+/* start nav formatting */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: whitesmoke;
+    color: firebrick;
+    margin-top: -15px;
+    margin-left: -15px;
+    width: 100% + 15px;
+}
+
+.logo {
+    width: 350px;
+    height: 120px;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    font-size: 3rem;
+    color: red;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+/* end nav formatting */
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 26px;
+  padding: 10px;
+  margin: 10px;
+  width: 400px;
+  height: 600px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.card p {
+  margin-top: 10px;
+}
+
+.college-logo {
+    width: 300px;
+    length: 300px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    padding: 10px;
+}
+
+.college-logo:hover {
+  transform: scale(1.2);
+}
+
+#college-merch {
+    width: 400px;
+    length: 400px;
+}
+
+#main-topic {
+    font-size: 100pt;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: firebrick;
+}
+
+.merch-display {
+    float: left;
+    margin-right: 130px;
+}
+
+
+</style>
+</head>
+<body>
+<nav class="navbar">
+    <a href="home.html">
+        <img src="https://github.com/Pjt727/group-system-design/blob/main/img/CampusInkLogo.png?raw=true" alt="Logo" class="logo">
+    </a>
+  <div class="nav-links">
+    <a href="404-Page.html">Our Competition</a>
+    <a href="#">Design Philosophy</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
+<div class="container">
+    <h1 id="main-topic">We design.</h1>
+    <div class="merch-display">
+        <table class="merch-display">
+            <tr>
+                <td>
+                    <img onclick="maristClick()"
+                    class="college-logo" src="https://i.pinimg.com/originals/c5/1c/9e/c51c9e8ef3a9a70d75dd89abdeaccfb8.png" alt="Marist logo">
+                </td>
+                <td>
+                    <img onclick="mitClick()"
+                    class="college-logo" src="https://1000logos.net/wp-content/uploads/2022/08/MIT-Emblem.png" alt="MIT logo">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img onclick="yaleClick()"
+                    class="college-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Yale_University_Shield_1.svg/1200px-Yale_University_Shield_1.svg.png" alt="Yale logo">
+                </td>
+                <td>
+                    <img onclick="harvardClick()"
+                    class="college-logo" src="https://1000logos.net/wp-content/uploads/2017/02/Harvard-Logo.png" alt="Havard logo">
+                </td>
+            </tr>
+        </table>
+        <div id="merch-card" class="card merch-display">
+          <img id="college-merch" src="https://via.placeholder.com/400" alt="Image">
+          <p>Click on one of the college symbols to show our awesome merch!</p>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    const maristDesc = `We were able to provide Marist with a very good design for their general merch!\
+        It is great that such a small liberal arts school can have merch that looks this good!`;
+    const maristUrl = "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C71ucOdluiBL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UY1000_.png";
+
+    const mitDesc = `One of the greatest tech schoools sought our help to get \
+        a fairly simple design onto some sweatshirts for their esport team! We are very happy with the\
+        result and their Rocket League team won their LAN competition.`;
+    const mitUrl = "https://www.thedota2store.com/wp-content/uploads/2023/12/Massachusetts-Institute-of-Technology-Pullover-Hoodie.webp";
+
+    const yaleDesc = `We were able to make this hit for the IVY school Yale. Their \
+        mock trail team needed something to rock outside of the court room!`;
+    const yaleUrl = "https://m.media-amazon.com/images/I/51RZf3mG2xL._AC_SL1000_.jpg";
+
+    const harvardDesc = `Possibly one of the most well known colleges we have worked for is Havard. Their\
+        team needs something nice and fashionable.`;
+    const harvardUrl = "https://i.etsystatic.com/16053592/r/il/4fd923/5053013567/il_fullxfull.5053013567_e8jp.jpg";
+
+    const merchCard = document.getElementById("merch-card");
+    const merchImg = merchCard.querySelector("img");
+    const merchDesc = merchCard .querySelector("p");
+
+    function maristClick() {
+        merchImg.src = maristUrl;
+        merchDesc.innerText = maristDesc;
+    }
+
+    function mitClick() {
+        merchImg.src = mitUrl;
+        merchDesc.innerText = mitDesc;
+    }
+
+    function yaleClick() {
+        merchImg.src = yaleUrl;
+        merchDesc.innerText = yaleDesc;
+    }
+
+    function harvardClick() {
+        merchImg.src = harvardUrl;
+        merchDesc.innerText = harvardDesc;
+    }
+
+</script>
+</html>

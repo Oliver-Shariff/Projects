@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:https="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Philosophy</title>
+    <style>
+        div {
+            padding: 5px 5px 5px 5px ;
+            margin: 5px 5px 5px 5px ;
+        }
+        .card   {
+            height: 90%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            text-align: center;
+            margin: auto;
+            background-position: center;
+            height: 90%;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: whitesmoke;
+            color: firebrick;
+            margin-top: -15px;
+            margin-left: -15px;
+            width: 100% + 15px;
+        }
+        .logo {
+            width: 350px;
+            height: 120px;
+        }
+        .nav-links {
+            display: flex;
+        }
+        .nav-links a {
+            font-size: 3rem;
+            color: red;
+            text-decoration: none;
+            margin-right: 30px;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        .more   {
+            border-radius: 11px;
+            box-sizing: border-box;
+            justify-content: center;
+            background: red;
+            color: white;
+            font-size: large;
+            display: flex;
+            width: 20%;
+            height: 50px;
+            margin: auto;
+        }
+        body{
+            font-family: 'Garamond';
+        }
+    </style>
+
+</head>
+<body onload="updateCard(document.getElementById('PS'),psExtCard), updateCard(document.getElementById('cv'),cvExtCard), updateCard(document.getElementById('rlt'),rltExtCard),
+updateCard(document.getElementById('trend'),trendExtCard), updateCard(document.getElementById('DP'),dpExtCard)" >
+<nav class="navbar">
+    <a href="home.html">
+        <img src="https://github.com/Pjt727/group-system-design/blob/main/img/CampusInkLogo.png?raw=true" alt="Logo" class="logo">
+    </a>
+    <div class="nav-links">
+        <a href="404-Page.html">Our Competition</a>
+        <a href="#">Design Philosophy</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+   <div id="btmMain" style="width: 40%; margin: auto;">
+       <div id="bt1" style="width: 60%; margin: auto; height: 400px">
+           <div id="DP" class="card" style="float: left; width: 45%; "
+                onmouseover="updateCard(document.getElementById('DP'), dpHvrCard)" onmouseleave=" updateCard(document.getElementById('DP'), dpExtCard)">
+           </div>
+           <div id="PS" class="card" style="float: left; width: 45%;"
+                onmouseover="updateCard(document.getElementById('PS'), psHvrCard)" onmouseleave="updateCard(document.getElementById('PS'),psExtCard)">
+           </div>
+           <br style="clear: left">
+       </div>
+       <div id="btm2" style="marign: auto; height: 400px">
+           <div id="cv" class="card" style="float: left; width: 30%;"
+           onmouseover="updateCard(document.getElementById('cv'), cvHvrCard)" onmouseleave="updateCard(document.getElementById('cv'),cvExtCard)">
+
+           </div>
+           <div id="rlt" class="card" style="float: left; width: 30%;"
+            onmouseover="updateCard(document.getElementById('rlt'), rltHvrCard)" onmouseleave="updateCard(document.getElementById('rlt'), rltExtCard)">
+
+           </div>
+           <div id="trend" class="card" style="float: left; width: 30%;"
+           onmouseover="updateCard(document.getElementById('trend'), trendHvrCard)" onmouseleave="updateCard(document.getElementById('trend'),trendExtCard)">
+           </div>
+           <br style="clear: left">
+       </div>
+   </div>
+    <div>
+        <a href="404-Page.html">
+            <button class="more">Learn More</button>
+        </a>
+    </div>
+
+<script>
+
+    let dpExtCard = {
+        pos: "center",
+        sz: "contain",
+        rpt: "no-repeat",
+        bkg: "url(https://zight.com/wp-content/uploads/2019/11/6-Crucial-Elements-and-Principles-of-Design.jpg)",
+        inht: "<h2><strong> Design Philosophy</strong></h2>",
+    }
+    let psExtCard = {
+        pos: "center",
+        sz: "contain",
+        rpt: "no-repeat",
+        bkg: "url(https://auo.org.uk/wp-content/uploads/2022/10/kisspng-implementation-problem-solving-business-collaborat-innovation-5abfc6ff88f740.700174331522517759561-300x300.png)",
+        inht: "<h2><strong> Problem Solving</strong></h2>",
+    }
+    let cvExtCard = {
+        pos: "center",
+        sz: "contain",
+        rpt: "no-repeat",
+        bkg: "url(https://deerdesigner.com/wp-content/uploads/mktng023-10-Ways-you-can-make-your-web-design-more-accessible-01.png)",
+        inht: "<h2><strong> Core Values </strong></h2>",
+    }
+    let rltExtCard = {
+        pos: "center",
+        sz: "contain",
+        rpt: "no-repeat",
+        bkg: "url(https://connect.redhat.com/sites/default/files/2021-03/os.png)",
+        inht: "<h2><strong> Client Relationships </strong></h2>",
+    }
+    let trendExtCard = {
+        pos: "center",
+        sz: "contain",
+        rpt: "no-repeat",
+        bkg: "url(https://drexel.edu/~/media/Images/graduatecollege/blog-graduate/Relationship.ashx?h=494&w=640&hash=56E7D6A9949828D3F430B8BBA62FA4C38240A6C3)",
+        inht: "<h2><strong> Innovations and Trends </strong></h2>",
+    }
+
+    let psHvrCard = {
+        bkg: "none",
+        inht: "<strong>Problem Solving </strong> <br>  Simplicity is key, everything from production to delivery logistics is handled by our systems. We want to service all clients regardless otheir technological skill or design experience, so we strive to make our systems as simple and intuitive as possible.",
+    }
+    let dpHvrCard = {
+        bkg: "none",
+        inht: "<strong>Design Philosophy </strong> <br> Every group has its innate unique identity. We believe designs should work with and around this identity in the most natural way possible.",
+    }
+    let cvHvrCard = {
+        bkg: "none",
+        inht: "<strong>Core Values </strong> <br> <ul>" +
+            " <li> Accessibility: Every club/ team no matter the size should be able to have curated items." +
+            "<li> Positivity: Designs are the first impression your club makes on outsiders. These designs should highlight the positive impacts and nature of your club." +
+            "<li> Diversity: Every club/ team no matter of race, gender identity, body shape, or disabilities should have items which speak for them." +
+            " </ul>"
+    }
+    let rltHvrCard = {
+        bkg: "none",
+        inht: "<strong>Client Relationships</strong> <br>  " +
+            "We work closely with club leaders and organizations as a whole to make sure our designs embrace your group’s identity." +
+            "Feedback and input are always encouraged!",
+    }
+    let trendHvrCard = {
+        bkg: "none",
+        inht: "<strong>Innovations and Trends </strong> <br> <ul> " +
+            "<li>Website and app</li>" +
+            "<li>Integration with other popular apps such as discord that colleges already use for clubs." +
+            "<li>Integration with storefronts that can provide t-shirt/ other items designs." +
+            "<li>Use of large language models for generation of unique artwork when designing items." +
+            "</ul> ",
+    }
+
+    function updateCard(sec, crdName){
+        sec.innerHTML = crdName.inht;
+        sec.style.background = crdName.bkg;
+        sec.style.backgroundPosition = crdName.pos;
+        sec.style.backgroundSize = crdName.sz;
+        sec.style.backgroundRepeat = crdName.rpt;
+    }
+</script>
+
+</body>
+</html>
